@@ -1,22 +1,4 @@
- spring:
-   kafka:
-     consumer:
-       inte
-       bootstrap-servers: 10.211.55.9:9092
-       group-id: foo
-       auto-offset-reset: earliest
-       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-       value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
-       properties:
-         spring:
-           json:
-             trusted:
-               packages: "*"
-           deserializer:
-             value:
-               delegate:
-                 class: org.springframework.kafka.support.serializer.JsonDeserializer
-     producer:
-       bootstrap-servers: 10.211.55.9:9092
-       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+kafka:
+  broker: 10.211.55.9:9092
+  group-id: foo
+  topic: quickstart-events
