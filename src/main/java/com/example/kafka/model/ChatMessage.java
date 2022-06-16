@@ -11,7 +11,9 @@ import java.time.LocalDateTime;
 @Setter
 public class ChatMessage{
     private String sender;
+    private String senderIP;
     private String content;
     private String roomID;
+    private ChatMessageType type;
     private LocalDateTime sendingTime;
 }
