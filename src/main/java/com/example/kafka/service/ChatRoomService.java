@@ -31,11 +31,6 @@ public class ChatRoomService {
                 .orElseThrow(RuntimeException::new);
     }
     public List<ChatRoom> findAllRoom(){
-        List<ChatRoom> chatRooms = chatRoomRepository.findAllRoom();
-
-        if(chatRooms.size() == 0)
-            throw new RuntimeException();
-
-        return chatRooms;
+        return chatRoomRepository.findAllRoom();
     }
 }
